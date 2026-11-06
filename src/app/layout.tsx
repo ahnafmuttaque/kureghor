@@ -116,7 +116,8 @@ export default function RootLayout({
       <body className="font-body text-on-surface bg-surface antialiased flex flex-col min-h-screen">
         <JsonLd />
         <Header />
-        <main className="flex-1 pt-24 md:pt-28">{children}</main>
+        {/* Generous top clearance on mobile (pt-32 sm:pt-32 md:pt-28) ensures no content sits under the fixed header */}
+        <main className="flex-1 pt-32 sm:pt-32 md:pt-28">{children}</main>
         <Footer />
       </body>
     </html>
