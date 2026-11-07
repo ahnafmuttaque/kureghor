@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { FOUNDATION_INFO } from "@/data/foundationInfo";
 import { Heart, Menu, X, Users, ArrowRight } from "lucide-react";
@@ -42,8 +43,15 @@ export default function Header() {
         <div className="h-full max-w-[1280px] mx-auto px-4 md:px-8 flex items-center justify-between">
           {/* Logo & Brand */}
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center font-bold text-base sm:text-lg shadow-sm group-hover:scale-105 transition-transform shrink-0">
-              কুঁ
+            <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-xl overflow-hidden group-hover:scale-105 transition-transform shrink-0 flex items-center justify-center">
+              <Image
+                src={FOUNDATION_INFO.logo}
+                alt={FOUNDATION_INFO.name}
+                width={48}
+                height={48}
+                priority
+                className="w-full h-full object-contain aspect-square"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-headline text-lg sm:text-xl md:text-2xl text-primary tracking-tight font-bold leading-tight">
@@ -112,8 +120,29 @@ export default function Header() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-surface-container-lowest border-b border-surface-container shadow-xl">
-          <div className="px-4 py-6 space-y-4 max-w-[1280px] mx-auto">
+        <div className="lg:hidden bg-surface-container-lowest border-b border-surface-container shadow-xl animate-in slide-in-from-top-2 duration-200">
+          <div className="px-4 py-5 space-y-4 max-w-[1280px] mx-auto">
+            {/* Drawer Brand Header */}
+            <div className="flex items-center gap-3 pb-3 border-b border-surface-container">
+              <div className="relative w-10 h-10 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
+                <Image
+                  src={FOUNDATION_INFO.logo}
+                  alt={FOUNDATION_INFO.name}
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain aspect-square"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-headline text-base text-primary font-bold">
+                  {FOUNDATION_INFO.name}
+                </span>
+                <span className="text-[10px] text-on-surface-variant line-clamp-1">
+                  {FOUNDATION_INFO.tagline}
+                </span>
+              </div>
+            </div>
+
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (

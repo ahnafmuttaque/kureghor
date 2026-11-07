@@ -16,8 +16,10 @@ export const FOUNDATION_INFO = {
   name: "কুঁড়েঘর ফাউন্ডেশন",
   fullName: "কুঁড়েঘর অ্যাসোসিয়েশন / কুঁড়েঘর ফাউন্ডেশন",
   englishName: "Kureghor Foundation",
+  logo: "/kureghor-logo.png",
   establishedYear: "২০২১",
-  tagline: "তারুণ্যের শক্তিতে সম্ভাবনার বিকাশ। নিঃস্বার্থ সেবায় আগামীর বাংলাদেশ।",
+  tagline:
+    "তারুণ্যের শক্তিতে সম্ভাবনার বিকাশ। নিঃস্বার্থ সেবায় আগামীর বাংলাদেশ।",
   description:
     "পাবলিক বিশ্ববিদ্যালয়ের শিক্ষার্থীদের পরিচালিত সম্পূর্ণ অরাজনৈতিক ও অলাভজনক স্বেচ্ছাসেবী মানবিক উদ্যোগ। শিক্ষা সহায়তা, বিনামূল্যে চিকিৎসা, পরিবেশ সুরক্ষা ও জরুরি মানবিক সহায়তায় নিবেদিত।",
   address: "সুন্দরগঞ্জ (৫৭২০), গাইবান্ধা, বাংলাদেশ",
@@ -39,24 +41,86 @@ export const FOUNDATION_INFO = {
   },
   metrics: [
     { icon: "nature", value: "১৮,৫০০+", label: "১২টি জেলায় রোপিত বৃক্ষ" },
-    { icon: "calculate", value: "৪,২০০+", label: "মেন্টরশিপপ্রাপ্ত শিক্ষার্থী" },
-    { icon: "health_and_safety", value: "৯,৮০০+", label: "বিনামূল্যে সেবাগ্রহীতা রোগী" },
-    { icon: "groups", value: "১,৪০০+", label: "সক্রিয় বিশ্ববিদ্যালয় ভলান্টিয়ার" },
+    {
+      icon: "calculate",
+      value: "৪,২০০+",
+      label: "মেন্টরশিপপ্রাপ্ত শিক্ষার্থী",
+    },
+    {
+      icon: "health_and_safety",
+      value: "৯,৮০০+",
+      label: "বিনামূল্যে সেবাগ্রহীতা রোগী",
+    },
+    {
+      icon: "groups",
+      value: "১,৪০০+",
+      label: "সক্রিয় বিশ্ববিদ্যালয় ভলান্টিয়ার",
+    },
     { icon: "verified", value: "১০০%", label: "উন্মুক্ত পাবলিক অডিট লেজার" },
   ] as ImpactMetric[],
+  keyMetrics: [
+    {
+      icon: "diversity_3",
+      value: "১,৪০০+",
+      label: "সদস্য ও স্বেচ্ছাসেবী",
+      color: "text-primary",
+    },
+    {
+      icon: "volunteer_activism",
+      value: "৩,৫০০+",
+      label: "সরাসরি উপকৃত মানুষ",
+      color: "text-secondary",
+    },
+    {
+      icon: "school",
+      value: "১২+",
+      label: "পাবলিক বিশ্ববিদ্যালয় চ্যাপ্টার",
+      color: "text-primary",
+    },
+    {
+      icon: "account_balance",
+      value: "১০০%",
+      label: "স্বচ্ছ পাবলিক লেজার",
+      color: "text-secondary",
+    },
+  ],
   historicalMetrics: {
-    beneficiaries: "৫,০০০+",
-    members: "২০০+",
-    fundsRaised: "৩,০০,০০০৳+",
-    eventsCompleted: "১২ টি",
+    beneficiaries: "৩,৫০০+",
+    members: "১,৪০০+",
+    fundsRaised: "৩,২০,০০০+ ৳",
+    eventsCompleted: "১০+",
   },
   universityChapters: [
-    { name: "ঢাকা উইং", shortName: "ঢাবি", volunteers: "৩২০ জন ভলান্টিয়ার", role: "সমন্বয়ক শাখা" },
-    { name: "বুয়েট চ্যাপ্টার", shortName: "বুয়েট", volunteers: "১৯০ জন ভলান্টিয়ার", role: "প্রযুক্তি ও লজিস্টিকস" },
-    { name: "রাজশাহী উইং", shortName: "রাবি", volunteers: "২১০ জন ভলান্টিয়ার", role: "উত্তরবঙ্গ সমন্বয়" },
-    { name: "চট্টগ্রাম উইং", shortName: "চবি", volunteers: "১৮০ জন ভলান্টিয়ার", role: "দক্ষিণ উইং" },
-    { name: "সাস্ট ইউনিট", shortName: "সাস্ট", volunteers: "১৬০ জন ভলান্টিয়ার", role: "সিলেট বিভাগ" },
-    { name: "জাহাঙ্গীরনগর", shortName: "জাবি", volunteers: "১৪০ জন ভলান্টিয়ার", role: "ফিল্ড অপারেশনস" },
+    {
+      name: "ঢাকা বিশ্ববিদ্যালয়",
+      shortName: "DU",
+      volunteers: "৪৫০+",
+      role: "কেন্দ্রীয় সমন্বয় ও নীতি নির্ধারণ",
+    },
+    {
+      name: "জাহাঙ্গীরনগর বিশ্ববিদ্যালয়",
+      shortName: "JU",
+      volunteers: "৩২০+",
+      role: "পরিবেশ ও বনায়ন গবেষণা শাখা",
+    },
+    {
+      name: "রাজশাহী বিশ্ববিদ্যালয়",
+      shortName: "RU",
+      volunteers: "২৯০+",
+      role: "উত্তরবঙ্গ আঞ্চলিক কার্যক্রম ও ত্রাণ সেল",
+    },
+    {
+      name: "চট্টগ্রাম বিশ্ববিদ্যালয়",
+      shortName: "CU",
+      volunteers: "১৮০+",
+      role: "জরুরি ওষুধ ও মেডিকেল ক্যাম্প শাখা",
+    },
+    {
+      name: "বাংলাদেশ কৃষি বিশ্ববিদ্যালয়",
+      shortName: "BAU",
+      volunteers: "১৬০+",
+      role: "কৃষি উন্নয়ন ও চরাঞ্চল সহায়তা সেল",
+    },
   ] as UniversityChapter[],
   pillars: [
     {
@@ -127,3 +191,43 @@ export const FOUNDATION_INFO = {
     politicalDues: "০%",
   },
 };
+
+export const QUICK_LINKS = [
+  { href: "/", label: "হোম" },
+  { href: "/about", label: "আমাদের সম্পর্কে" },
+  { href: "/works", label: "কার্যক্রম ও ইভেন্ট" },
+  { href: "/donation", label: "দান করুন" },
+  { href: "/transparency", label: "স্বচ্ছতা ও হিসাব" },
+  { href: "/contact", label: "যোগাযোগ" },
+];
+
+export const PILLARS = [
+  {
+    title: "শিক্ষা ও তারুণ্যের বিকাশ",
+    description:
+      "মেধা যাচাই গণিত অলিম্পিয়াড, পাবলিকিয়ান গাইডলাইন মেন্টরশিপ ও সুবিধাবঞ্চিত মেধাবীদের শিক্ষা উপকরণ বিতরণ।",
+    icon: "school",
+    link: "/works/olympiad-publician2025",
+  },
+  {
+    title: "জরুরি দুর্যোগ ও শীতবস্ত্র",
+    description:
+      "তিস্তা ও ব্রহ্মপুত্র তীরবর্তী বানভাসি এবং উত্তরবঙ্গের কনকনে শীতে শীতার্ত মানুষের ঘরে ঘরে প্রয়োজনীয় সহায়তা পৌঁছে দেওয়া।",
+    icon: "severe_cold",
+    link: "/works/winter-clothes-char2025",
+  },
+  {
+    title: "ফ্রি মেডিকেল ও জনস্বাস্থ্য",
+    description:
+      "বিশেষজ্ঞ ডাক্তার ও ইন্টার্ন চিকিৎসকদের সমন্বয়ে গ্রামীণ মানুষের মাঝে ফ্রি ব্যবস্থাপত্র এবং বিনামূল্যে প্রয়োজনীয় ওষুধ সরবরাহ।",
+    icon: "medical_services",
+    link: "/works/free-medical2026",
+  },
+  {
+    title: "পরিবেশ ও বৃক্ষরোপণ অভিযান",
+    description:
+      "জলবায়ু সংকট মোকাবিলায় উত্তরবঙ্গের গ্রামীণ সড়ক ও চরাঞ্চলে ফলদ ও ঔষধি বৃক্ষরোপণ এবং সবুজায়ন প্রকল্প।",
+    icon: "psychiatry",
+    link: "/works/tree-plantation-campaign",
+  },
+];

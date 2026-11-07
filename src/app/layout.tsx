@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/seo/JsonLd";
-import { FOUNDATION_INFO } from "@/data/foundationInfo";
+import { SITE_URL } from "@/utils/siteConfig";
 
 const hindSiliguri = Hind_Siliguri({
   subsets: ["bengali", "latin"],
@@ -15,20 +15,18 @@ const hindSiliguri = Hind_Siliguri({
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
   variable: "--font-jakarta",
   display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kureghorfoundation.org"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "কুঁড়েঘর ফাউন্ডেশন | তারুণ্যের শক্তিতে সম্ভাবনার বিকাশ",
     template: "%s | কুঁড়েঘর ফাউন্ডেশন",
@@ -50,6 +48,11 @@ export const metadata: Metadata = {
   authors: [{ name: "কুঁড়েঘর অ্যাসোসিয়েশন" }],
   creator: "কুঁড়েঘর অ্যাসোসিয়েশন",
   publisher: "কুঁড়েঘর ফাউন্ডেশন",
+  icons: {
+    icon: [{ url: "/kureghor-logo.png", sizes: "any" }],
+    apple: "/kureghor-logo.png",
+    shortcut: "/kureghor-logo.png",
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -62,11 +65,17 @@ export const metadata: Metadata = {
     title: "কুঁড়েঘর ফাউন্ডেশন — তারুণ্যের শক্তিতে সম্ভাবনার বিকাশ",
     description:
       "পাবলিক বিশ্ববিদ্যালয়ের শিক্ষার্থীদের পরিচালিত ১০০% অরাজনৈতিক ও অলাভজনক স্বেচ্ছাসেবী মানবিক উদ্যোগ। শিক্ষা, স্বাস্থ্যসেবা ও পরিবেশ উন্নয়নে নিবেদিত।",
-    url: "https://kureghorfoundation.org",
+    url: SITE_URL,
     siteName: "কুঁড়েঘর ফাউন্ডেশন",
     locale: "bn_BD",
     type: "website",
     images: [
+      {
+        url: "/kureghor-logo.png",
+        width: 500,
+        height: 500,
+        alt: "কুঁড়েঘর ফাউন্ডেশন প্রতীক",
+      },
       {
         url: "https://lh3.googleusercontent.com/aida-public/AB6AXuD747y_hCBwsQtr9Fi-NKCl4bhIoGo2wnLkYAC8JICvTRQE94LjuwFka-FA4q0uvk-1qVfTklBDQ9dUS22wZZBwUi3Yv1bHLfSRsT7wStE2KetkMe6ys_SjfcdADMOy7s7N09CO4nFDXezoA0DeVDkmvIHWj0R6rMn4Q4dw0Srp2gGFjdhpJ1MCjNoMK47VWMjb9e3w8d1gExip_KBw-XsMlAmNMiIilDL4HoYRZ5E",
         width: 1200,
@@ -80,9 +89,7 @@ export const metadata: Metadata = {
     title: "কুঁড়েঘর ফাউন্ডেশন — তারুণ্যের শক্তিতে সম্ভাবনার বিকাশ",
     description:
       "পাবলিক বিশ্ববিদ্যালয়ের শিক্ষার্থীদের পরিচালিত সম্পূর্ণ অরাজনৈতিক ও অলাভজনক স্বেচ্ছাসেবী মানবিক উদ্যোগ।",
-    images: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD747y_hCBwsQtr9Fi-NKCl4bhIoGo2wnLkYAC8JICvTRQE94LjuwFka-FA4q0uvk-1qVfTklBDQ9dUS22wZZBwUi3Yv1bHLfSRsT7wStE2KetkMe6ys_SjfcdADMOy7s7N09CO4nFDXezoA0DeVDkmvIHWj0R6rMn4Q4dw0Srp2gGFjdhpJ1MCjNoMK47VWMjb9e3w8d1gExip_KBw-XsMlAmNMiIilDL4HoYRZ5E",
-    ],
+    images: ["/kureghor-logo.png"],
   },
   robots: {
     index: true,

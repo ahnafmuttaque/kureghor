@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { FOUNDATION_INFO } from "@/data/foundationInfo";
 import {
@@ -58,18 +59,43 @@ export default function AboutPage() {
   return (
     <div className="w-full bg-surface py-12 md:py-16">
       <div className="max-w-[1280px] mx-auto px-4 md:px-8 space-y-16">
-        {/* Hero Section */}
-        <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold">
-            <Users className="w-3.5 h-3.5" />
-            <span>আমাদের পরিবর্তনের গল্প • ২০২১ থেকে নিরলস সেবায়</span>
+        {/* Hero Section with Official Emblem */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-8 space-y-4">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold">
+              <Users className="w-3.5 h-3.5" />
+              <span>আমাদের পরিবর্তনের গল্প • ২০২১ থেকে নিরলস সেবায়</span>
+            </div>
+            <h1 className="font-headline text-3xl md:text-5xl font-extrabold text-on-surface tracking-tight">
+              তারুণ্যের বিবেক ও দায়বদ্ধতায় গড়ে ওঠা এক আলোকবর্তিকা
+            </h1>
+            <p className="text-base md:text-lg text-on-surface-variant leading-relaxed">
+              {FOUNDATION_INFO.description} উত্তরবঙ্গের সুবিধাবঞ্চিত ও
+              তিস্তা-ব্রহ্মপুত্র চর এলাকার মানুষের মৌলিক অধিকার ও
+              শিক্ষাব্যবস্থার আধুনিকায়নে আমাদের এই পথচলা।
+            </p>
           </div>
-          <h1 className="font-headline text-3xl md:text-5xl font-extrabold text-on-surface tracking-tight">
-            তারুণ্যের বিবেক ও দায়বদ্ধতায় গড়ে ওঠা এক আলোকবর্তিকা
-          </h1>
-          <p className="text-base md:text-lg text-on-surface-variant leading-relaxed">
-            {FOUNDATION_INFO.description} উত্তরবঙ্গের সুবিধাবঞ্চিত ও তিস্তা-ব্রহ্মপুত্র চর এলাকার মানুষের মৌলিক অধিকার ও শিক্ষাব্যবস্থার আধুনিকায়নে আমাদের এই পথচলা।
-          </p>
+
+          <div className="lg:col-span-4 flex justify-center lg:justify-end">
+            <div className="relative p-6 rounded-3xl bg-surface-container-lowest border border-surface-container shadow-md flex flex-col items-center text-center max-w-[280px] w-full">
+              <div className="relative w-40 h-40 sm:w-48 sm:h-48 aspect-square rounded-2xl overflow-hidden shadow-inner bg-white p-2 flex items-center justify-center">
+                <Image
+                  src={FOUNDATION_INFO.logo}
+                  alt={FOUNDATION_INFO.name}
+                  width={200}
+                  height={200}
+                  priority
+                  className="w-full h-full object-contain aspect-square rounded-xl"
+                />
+              </div>
+              <span className="font-headline font-bold text-sm text-on-surface mt-4">
+                {FOUNDATION_INFO.name}
+              </span>
+              <span className="text-[11px] text-on-surface-variant font-medium">
+                অফিশিয়াল প্রতীক ও মনোগ্রাম
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Milestone Impact Ribbon */}
@@ -118,10 +144,17 @@ export default function AboutPage() {
               ২০২১ সালের এক সোনালী প্রত্যুষে যার শুরু
             </h2>
             <p className="text-sm md:text-base text-on-surface-variant leading-relaxed">
-              করোনাত্তোর ২০২১ সালে গাইবান্ধার সুন্দরগঞ্জের প্রত্যন্ত কঞ্চিবাড়ি ইউনিয়নের মাত্র ১১টি পরিবারের ঘরে ঈদের আনন্দ ভাগাভাগির সামান্য ১,১০০ টাকার বাজেট নিয়ে কুঁড়েঘরের প্রথম যাত্রা শুরু হয়েছিল। সেই বীজ আজ মহীরুহে পরিণত হয়ে দেশের ১২টি শীর্ষ পাবলিক বিশ্ববিদ্যালয়ের ১,৪০০+ শিক্ষার্থীর এক সমন্বিত শক্তিতে রূপ নিয়েছে।
+              করোনাত্তোর ২০২১ সালে গাইবান্ধার সুন্দরগঞ্জের প্রত্যন্ত কঞ্চিবাড়ি
+              ইউনিয়নের মাত্র ১১টি পরিবারের ঘরে ঈদের আনন্দ ভাগাভাগির সামান্য
+              ১,১০০ টাকার বাজেট নিয়ে কুঁড়েঘরের প্রথম যাত্রা শুরু হয়েছিল। সেই বীজ
+              আজ মহীরুহে পরিণত হয়ে দেশের ১২টি শীর্ষ পাবলিক বিশ্ববিদ্যালয়ের
+              ১,৪০০+ শিক্ষার্থীর এক সমন্বিত শক্তিতে রূপ নিয়েছে।
             </p>
             <p className="text-sm md:text-base text-on-surface-variant leading-relaxed">
-              আমরা উপলব্ধি করেছি, গ্রামীণ জনপদে শুধু মৌসুমি ত্রাণের চেয়ে বড় প্রয়োজন তরুণ প্রজন্মের আত্মবিশ্বাস জাগিয়ে তোলা, বিজ্ঞান ও গণিত শিক্ষার আলো ছড়িয়ে দেওয়া এবং দুর্যোগে নিজেদের পায়ে দাঁড়ানোর শক্তি যোগানো।
+              আমরা উপলব্ধি করেছি, গ্রামীণ জনপদে শুধু মৌসুমি ত্রাণের চেয়ে বড়
+              প্রয়োজন তরুণ প্রজন্মের আত্মবিশ্বাস জাগিয়ে তোলা, বিজ্ঞান ও গণিত
+              শিক্ষার আলো ছড়িয়ে দেওয়া এবং দুর্যোগে নিজেদের পায়ে দাঁড়ানোর শক্তি
+              যোগানো।
             </p>
           </div>
 
@@ -131,7 +164,9 @@ export default function AboutPage() {
               <span>মূল কর্ম এলাকা (গাইবান্ধা অঞ্চল)</span>
             </h3>
             <p className="text-xs md:text-sm text-on-surface-variant">
-              প্রধান কার্যালয়: সুন্দরগঞ্জ (পোস্ট কোড: ৫৭২০), গাইবান্ধা। তিস্তা ও ব্রহ্মপুত্র অববাহিকার নদীভাঙন কবলিত যে ৫টি ইউনিয়নে আমাদের টিম সর্বদা সরাসরি কর্মরত:
+              প্রধান কার্যালয়: সুন্দরগঞ্জ (পোস্ট কোড: ৫৭২০), গাইবান্ধা। তিস্তা ও
+              ব্রহ্মপুত্র অববাহিকার নদীভাঙন কবলিত যে ৫টি ইউনিয়নে আমাদের টিম
+              সর্বদা সরাসরি কর্মরত:
             </p>
             <div className="space-y-2.5 pt-2">
               {unions.map((u) => (
@@ -143,7 +178,9 @@ export default function AboutPage() {
                     <CheckCircle className="w-4 h-4 text-secondary shrink-0" />
                     {u.name} ইউনিয়ন
                   </span>
-                  <span className="text-on-surface-variant font-medium">{u.role}</span>
+                  <span className="text-on-surface-variant font-medium">
+                    {u.role}
+                  </span>
                 </div>
               ))}
             </div>
@@ -193,10 +230,13 @@ export default function AboutPage() {
                 <span>প্রাতিষ্ঠানিক সহযোগিতা ও অংশীদারিত্ব</span>
               </div>
               <h3 className="font-headline text-xl md:text-2xl font-bold text-on-surface">
-                শিক্ষা প্রতিষ্ঠান, সামাজিক সংস্থা ও কর্পোরেট অংশীদারদের সাথে যৌথ কার্যক্রম
+                শিক্ষা প্রতিষ্ঠান, সামাজিক সংস্থা ও কর্পোরেট অংশীদারদের সাথে যৌথ
+                কার্যক্রম
               </h3>
               <p className="text-xs md:text-sm text-on-surface-variant leading-relaxed">
-                কুঁড়েঘর ফাউন্ডেশন যেসকল প্রতিষ্ঠান ও সংগঠন নিঃস্বার্থ সমাজসেবা ও শিক্ষার মানোন্নয়নে বিশ্বাসী, তাদের সাথে যৌথ সমঝোতা স্মারকের ভিত্তিতে মাঠপর্যায়ে টেকসই প্রকল্প বাস্তবায়নে সদা প্রস্তুত।
+                কুঁড়েঘর ফাউন্ডেশন যেসকল প্রতিষ্ঠান ও সংগঠন নিঃস্বার্থ সমাজসেবা ও
+                শিক্ষার মানোন্নয়নে বিশ্বাসী, তাদের সাথে যৌথ সমঝোতা স্মারকের
+                ভিত্তিতে মাঠপর্যায়ে টেকসই প্রকল্প বাস্তবায়নে সদা প্রস্তুত।
               </p>
             </div>
             <div className="md:col-span-4 flex flex-col gap-3">

@@ -1,8 +1,9 @@
 import { MetadataRoute } from "next";
 import { CAMPAIGNS } from "@/data/campaigns";
+import { getBaseUrl } from "@/utils/siteConfig";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://kureghorfoundation.org";
+  const baseUrl = getBaseUrl();
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
